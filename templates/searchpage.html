@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+        *{
+            background-color: white;
+        }
+        img{
+            max-width: 20%;
+            max-height: 20%;
+            min-width: 20%;
+            min-height: 20%;
+            border-radius: 30px;
+            box-shadow: 0 0 4px 4px #d5d1d1;
+        }
+        .container{
+            text-align: center;
+        }
+        #container-text{
+            font-size: 25px;
+            font-weight: bold;
+            padding:15px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #container-photo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        #container-wiki{
+            border: 2px solid rgb(244, 235, 235);
+            font-size: 18px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding:10px;
+            max-lines: 3;
+            
+        }
+        #container-media{
+            margin-top: 20px;            
+        }
+        .button-28 {
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #1A1A1A;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #3B3B3B;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 20px;
+            min-width: 12px;
+            outline: none;
+            padding: 10px 18px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 20%;
+            will-change: transform;
+        }
+
+        .button-28:disabled {
+            pointer-events: none;
+        }
+
+        .button-28:hover {
+            color: #fff;
+            background-color: #1A1A1A;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button-28:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+        #btn-2{
+            margin:0 80px;
+        }
+        #text{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            
+        }
+        #home-a{
+            margin-right:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" id="home-a"> Home</a>
+        
+        <div id="container-photo">
+            <img src= '/static/img/{{img_name}}' alt="Image">
+            <!-- <img src= '/static/img/Sundar Pichai businessman.jpg' alt="Image"> -->
+        </div>
+        
+        <div id="container-text">
+            {{face_name}}<br>{{face_profession}}
+        </div>
+
+        <div id="container-wiki">
+            <p id="text">
+                {{wiki_text}}
+            </p>
+            <a href="{{wiki_url}}">more</a>
+        </div>
+
+        <div id="container-media">
+            <a class="button-28" role="button" href="/tweets">Tweets</a>
+            <a class="button-28" id='btn-2' role="button" href="/songs">Songs</a>
+            <a class="button-28" role="button" href="/movies">Movies</a>
+        </div>
+    </div>
+</body>
+</html>
