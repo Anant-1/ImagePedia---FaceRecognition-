@@ -4,4 +4,4 @@ cv2, face_recognition, glob, numpy, pickle, traceback, googleapiclient, tweepy, 
 Framework->
 flask
 
-Run the app.py file after that choose the photo of any celebrity, sportsperson, politician and this app recognizes his/her face with the help of machine learning and then shows the his/her breif introduction, tweets, songs, movies
+Run the app.py file after that choose the photo of any celebrity, sportsperson, politician and this app recognizes his/her face with the help of machine learning and then shows the his/her brief introduction, tweets, songs, movies
