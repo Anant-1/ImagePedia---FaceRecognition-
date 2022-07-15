@@ -6,6 +6,7 @@ import cv2
 import pickle
 import traceback
 
+
 # with open('outfile', 'wb') as fp:
 #     pickle.dump(my_list, fp)
 
