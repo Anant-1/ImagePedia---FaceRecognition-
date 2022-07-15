@@ -2,7 +2,6 @@ import cv2
 import os
 from simple_facerec import SimpleFacerec
 
-
 def main_fun(img_name):
     sfr = SimpleFacerec()
     sfr.load_encoding_images("images/")
