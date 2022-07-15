@@ -116,8 +116,7 @@ class SimpleFacerec:
             #     if old_name != new_name:
             #         images
                 
-                
-
+        
             print(len(self.known_face_names))
             images_path = images_path[len(self.known_face_encodings):]
             self.write_data_file(images_path, is_slice = True)
