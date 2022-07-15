@@ -8,9 +8,6 @@ import fetch_movie_data
 import fetch_twitter
 app = Flask(__name__)
 
-
-
-
 @app.route('/')
 def load_home_page():
     return render_template('index.html')
@@ -55,9 +52,9 @@ def search_image():
 @app.route('/songs', methods=['GET', 'POST'])
 def get_songs():
     all_yt_songs = []
-    if face_profession == 'Actor' or face_profession == 'Actress':
+    if face_profession == 'Actor' or face_profession == 'Actress' or face_profession == 'Singer':
         all_yt_songs = fetch_yt_data.get_yt_data(face_name)
-        # print(all_yt_songs)
+        print(all_yt_songs)
     return render_template('youtubelist.html', all_yt_songs=all_yt_songs, face_name = face_name)
 
 @app.route('/movies', methods=['GET', 'POST'])
@@ -69,12 +66,12 @@ def get_movies():
 @app.route('/tweets', methods=['GET', 'POST'])
 def get_tweets():
     screen_name = fetch_twitter.get_screen_name(face_name)
+    if face_name == 'Darshan Raval':
+        screen_name = 'DarshanRavalOfc'
     print(screen_name)
     all_tweets = fetch_twitter.get_tweets(screen_name)
 
-    return render_template('tweetlist.html', all_tweets=all_tweets, face_name=face_name)
-
-    
+    return render_template('tweetlist.html', all_tweets=all_tweets, face_name=face_name) 
 
 if __name__ == '__main__':
     app.run(debug = True)

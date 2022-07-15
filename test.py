@@ -3,7 +3,7 @@ import os
 
 # files = glob.glob("*cycle*.log")
 # files.sort(key=os.path.getmtime)
-# print("\n".join(files))
+# print("/n".join(files))
 
 # images_path = 'images/'
 # images_path = glob.glob(os.path.join(images_path, "*.*")) 
@@ -57,10 +57,20 @@ query = "katrina kaif twitter screen name"
 # print(pos)
 
 
-from PIL import Image
-import requests
-from io import BytesIO
-url = 'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/Untitled_design_-_2022-05-12T2.png?TZreWdL_ak6ZBGfzn3hUiAudI_SBaqKR&size=770:433'
-response = requests.get(url)
-img = Image.open(BytesIO(response.content))
+import cv2
+import face_recognition
 
+img_path = 'C:/Users/anant/OneDrive/Desktop/data/Project/MultiFaceRecoginition/images/narendra modi politician.jpg'
+img = cv2.imread(img_path)
+rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# Get the filename only from the initial file path.
+basename = os.path.basename(img_path)
+(filename, ext) = os.path.splitext(basename)
+# Get encoding
+# face_encoding returns the 128 measurement of face
+img_encoding = face_recognition.face_encodings(rgb_img)[0]
+print(img_encoding)
+
+res = face_recognition.compare_faces([img_encoding], img_encoding, 0.6)
+print(res)

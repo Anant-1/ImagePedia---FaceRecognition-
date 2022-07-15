@@ -1,6 +1,4 @@
-from email.mime import image
 import face_recognition
-import cv2
 import os
 import glob
 import numpy as np
@@ -168,8 +166,12 @@ class SimpleFacerec:
 
 
     def detect_known_faces(self, frame):
+
         # Find all the faces and face encodings in the current frame of video
         small_frame = cv2.resize(frame, (0, 0), fx=self.frame_resizing, fy=self.frame_resizing)
+        # small_frame = frame
+        # cv2.imshow('face',small_frame)
+        # cv2.waitKey(0)
         # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
         rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
         face_locations = face_recognition.face_locations(rgb_small_frame)
@@ -180,6 +182,7 @@ class SimpleFacerec:
         face_professions = []
         # face_screen_names = []
         for face_encoding in face_encodings:
+            print('in')
             # See if the face is a match for the known face(s)
             matches = face_recognition.compare_faces(self.known_face_encodings, face_encoding)
             print("matches : ", matches)
@@ -212,3 +215,5 @@ class SimpleFacerec:
 
 # sfr = SimpleFacerec()
 # sfr.load_encoding_images('images/')
+# frame = cv2.imread('images/narendra modi politician.jpg')
+# sfr.detect_known_faces(frame)

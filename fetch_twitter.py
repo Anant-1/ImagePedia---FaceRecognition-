@@ -17,9 +17,12 @@ def get_screen_name(face_name):
 
 # to search
 	query = face_name.lower() + " twitter screen name"
-	res = search(query, tld="co.in", num=5, stop=5, pause=2)
+	res = search(query, tld="co.in", num=10, stop=10, pause=2)
 
 	link = ''
+
+	# for j in res:
+	# 	print(j)
 
 	for j in res:
 		if str(j).find('twitter') != -1:
@@ -61,4 +64,5 @@ def get_tweets(user_screen_name):
 	# print(all_tweets)
 	return all_tweets
 # get_tweets('katrinakaiffb')
+# print(get_screen_name('amitabh bachhan'))
 

@@ -87,7 +87,7 @@
             box-shadow: none;
             transform: translateY(0);
         }
-        #btn-2{
+        #songs-a{
             margin:0 80px;
         }
         #text{
@@ -124,10 +124,25 @@
         </div>
 
         <div id="container-media">
-            <a class="button-28" role="button" href="/tweets">Tweets</a>
-            <a class="button-28" id='btn-2' role="button" href="/songs">Songs</a>
-            <a class="button-28" role="button" href="/movies">Movies</a>
+            <a class="button-28" role="button" href="/tweets" id="tweet-a">Tweets</a>
+            <a class="button-28" id='songs-a' role="button" href="/songs">Songs</a>
+            <a class="button-28" role="button" href="/movies" id="movies-a">Movies</a>
         </div>
+        <!-- <button id="btn-op">Btn </button> -->
     </div>
+    <script>
+        btn = document.getElementById('btn-op');
+        songs_a = document.getElementById('songs-a')
+        movies_a = document.getElementById('movies-a')
+        profession = '{{face_profession}}'
+
+        if(profession == 'Politician' || profession == 'Cricketer') {
+            movies_a.style.display = 'none'    
+            songs_a.style.display = 'none'
+        } else if(profession == 'Singer'){
+            movies_a.style.display = 'none'    
+        }
+
+    </script>
 </body>
 </html>
