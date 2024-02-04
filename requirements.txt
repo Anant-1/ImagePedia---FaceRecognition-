@@ -1,5 +1,10 @@
 beautifulsoup4==4.11.1
 bs4==0.0.1
+CMake
+Pillow==9.1.0
+wheel==0.37.1
+face-recognition
 Flask==2.1.2
 google-api-python-client==2.52.0
 numpy==1.22.3
+requests==2.27.1
