@@ -119,3 +119,5 @@ def get_movies():
 def get_tweets():
     all_tweets, avatar, description = fetch_twitter.get_tweets(face_name)
     return render_template('tweetlist.html', all_tweets=all_tweets, face_name=face_name, description=description, avatar=avatar) 
+if __name__ == '__main__':
+    app.run(debug = True)
