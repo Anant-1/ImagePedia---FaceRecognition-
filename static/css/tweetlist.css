@@ -1,0 +1,126 @@
+body {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    color: #333;
+    /* Dark gray text color */
+}
+
+.avatar-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.tweet-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.tweet-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.tweet-date {
+    text-align: left;
+    margin-left: 20px;
+    color: #6c757d;
+    /* Gray text color */
+}
+
+.tweet-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tweet-image img {
+    max-width: 200px;
+    /* Adjust the max-width as needed */
+    height: auto;
+}
+
+/* .navbar-brand {
+            font-size: 1.5rem;
+        } */
+/* .container {
+    padding: 20px;
+} */
+
+.tweet-list {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tweet-list h2 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    border-color: #343a40;
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.alert-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.face-desc {
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.navbar {
+    background-color: #2196F3; /* Material-UI primary color */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.tweet-end{
+    display:flex;
+    float: right;
+}

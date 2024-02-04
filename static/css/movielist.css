@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #2196F3; /* Material-UI primary color */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+img {
+    border-radius: 10px;
+}
+td{
+    font-size: larger;
+    font-weight:bold;
+    font-style: italic;
+}
