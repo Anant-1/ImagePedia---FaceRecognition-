@@ -6,12 +6,6 @@ import cv2
 import pickle
 import traceback
 
-# with open('outfile', 'wb') as fp:
-#     pickle.dump(my_list, fp)
-
-# with open ('outfile', 'rb') as fp:
-#     itemlist = pickle.load(fp)
-
 def extract_text(s):
     res = ''
     for i in s:
