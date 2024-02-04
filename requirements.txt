@@ -3,5 +3,3 @@ bs4==0.0.1
 Flask==2.1.2
 google-api-python-client==2.52.0
 numpy==1.22.3
-opencv-python==4.5.5.64
-requests==2.27.1
